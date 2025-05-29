@@ -16,6 +16,8 @@ app.get("/catalog", async (req, res) => {
       `https://api.encar.com/search/car/list/general?count=true&q=${q}&inav=%7CMetadata%7CSort`,
       {
         headers: {
+          Host: "api.encar.com",
+          //   ":method": "GET",
           "user-agent":
             "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
           Accept:
@@ -23,9 +25,6 @@ app.get("/catalog", async (req, res) => {
           "Accept-Language": "en-US,en;q=0.9",
           Referer: "http://www.encar.com/",
           "sec-fetch-mode": "cors",
-          ":authority": "api.encar.com",
-          ":method": "GET",
-          "sec-fetch-site": "cross-site",
         },
       }
     )
