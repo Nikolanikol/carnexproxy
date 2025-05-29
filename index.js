@@ -23,6 +23,9 @@ app.get("/catalog", async (req, res) => {
           "Accept-Language": "en-US,en;q=0.9",
           Referer: "http://www.encar.com/",
           "sec-fetch-mode": "cors",
+          ":authority": "api.encar.com",
+          ":method": "GET",
+          "sec-fetch-site": "cross-site",
         },
       }
     )
